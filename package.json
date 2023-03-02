@@ -27,6 +27,7 @@
     "sass": "^1.52.1"
   },
   "dependencies": {
-    "gulp.spritesmith": "^6.13.0"
+    "gulp.spritesmith": "^6.13.0",
+    "three": "^0.129.0"
   }
 }

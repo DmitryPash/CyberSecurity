@@ -1,0 +1,11 @@
+Model Information:
+* title:	World Earth Planet
+* source:	https://sketchfab.com/3d-models/world-earth-planet-2d2e56a096a443e18074674deb076350
+* author:	mendessingrid (https://sketchfab.com/mendessingrid)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "World Earth Planet" (https://sketchfab.com/3d-models/world-earth-planet-2d2e56a096a443e18074674deb076350) by mendessingrid (https://sketchfab.com/mendessingrid) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

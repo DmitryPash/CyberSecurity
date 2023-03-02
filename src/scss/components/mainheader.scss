@@ -1,0 +1,22 @@
+.main-header {
+    position: relative;
+    height: 100vh;
+    &-item {
+        &-title {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: rem(54);
+            margin-bottom: 30px;
+        }
+        &-subtitle {
+            color: #fff;
+            font-size: rem(30);
+            margin-bottom: 40px;
+        }
+        &-btns  {
+            display: flex;
+            gap: 20px;
+            
+        }
+    }
+}

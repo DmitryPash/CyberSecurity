@@ -1,0 +1,56 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: $darkBlue;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #232047, $darkBlue);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #232047, $darkBlue); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0px;
+        height: 80px;
+    }
+    &-logo {
+        line-height: 0;
+    }
+    &-nav {
+        ul > li {
+            display: inline-block;
+            margin: 0px 10px;
+        }
+        ul {
+            margin-bottom: 0;
+        }
+        &-link {
+            position: relative;
+            font-size: rem(18);
+            &::after {
+                display: inline-block;
+                position: absolute;
+                transform: translateX(-50%);
+                left: 50%;
+                top: 101%;
+                border-radius: 100%;
+                content: '';
+                width: 8px;
+                height: 8px;
+                background-color: $orange;
+                opacity: 0;
+                transition: 0.3s ease-in-out;
+
+            }
+        }
+
+        li:hover {
+            .header-nav-link::after {
+                opacity: 1;
+            }
+        }
+    }
+}

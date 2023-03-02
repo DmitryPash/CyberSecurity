@@ -1,0 +1,37 @@
+.promo-advantages {
+    &-header {
+        &-label {
+            text-transform: uppercase;
+            color: $blue;
+            font-size: rem(20);
+            letter-spacing: 3px;
+            margin-bottom: 22px;
+
+        }
+        &-title {
+            color: #fff;
+            font-size: rem(52);
+            margin-bottom: 20px;
+        }
+        &-text {
+            color: $silver;
+            font-size: rem(22);
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.promo-advantage {
+    opacity: 0;
+    transition: 1s ease-in-out;
+    text-align: center;
+    &.animated {
+        opacity: 1;
+    }
+    &-digit {
+        font-size: rem(42);
+        color: $orange;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,54 @@
+.particle {
+    position: fixed;
+    z-index: -1;
+    will-change: transform;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid $orange;
+    transition: transform .1s;
+    &-1 {
+        width: 486px;
+        height: 486px;
+        left: -10%;
+        // top: 100%;
+        margin-top: -243px;
+        opacity: .2;
+    }
+}
+.line-wrapper {
+    position: absolute;
+    right: 150px;
+    top: 0px;
+    opacity: 0.5;
+}
+.line {
+    position: absolute;
+    z-index: -1;
+    will-change: transform;
+    background-color: $orange;
+    transition: transform .1s;
+    &-1 {
+        opacity: 1;
+        // right: 500px;
+        top: 0px;
+        width: 800px;
+        height: 1px;
+        transform: rotate(45deg);
+    }
+    &-2 {
+        opacity: 1;
+        // right: 500px;
+        top: 30px;
+        width: 800px;
+        height: 1px;
+        transform: rotate(45deg);
+    }
+    &-3 {
+        opacity: 1;
+        top: 60px;
+        // right: 500px;
+        width: 800px;
+        height: 1px;
+        transform: rotate(45deg);
+    }
+}

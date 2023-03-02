@@ -3,6 +3,8 @@
 @import "./base/typography.scss";
 @import "./base/grid.scss";
 @import "./base/mixin.scss";
+@import "./base/UI.scss";
+
 
 /* layout */
 @import "./layout/inc-header.scss";
@@ -34,8 +36,12 @@ body {
   font-weight: 400;
   font-size: rem(16px);
   line-height: 1.42;
-  color: #000;
-  background-color: #fff;
+  color: #fff;
+  // background-color: $darkBlue;
+  background: $darkBlue;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #232047, $darkBlue);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #232047, $darkBlue); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 #wrapper {
@@ -47,17 +53,23 @@ body {
   overflow: hidden;
   min-height: 100%;
   min-width: 100%;
+  padding-top: 80px;
 }
 
 #middle {
   flex: 1 0 auto;
   -webkit-box-flex: 1;
+  padding-top: 100px;
+  height: 3000px;
 }
 
 #footer {
   flex: 0 0 auto;
   -webkit-box-flex: 0;
 }
+
+
+
 
 .container {
   margin: 0 auto;
@@ -66,3 +78,33 @@ body {
   padding-left: $paddingContainer;
   padding-right: $paddingContainer;
 }
+
+body::-webkit-scrollbar {
+  width: 7px;
+  background-color: $darkBlue;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: $orange;
+}
+
+.scene {
+  max-width: 100%;
+  max-height: 100%;
+}
+.scene,
+canvas {
+  display: block;
+  position: relative;
+  width: 100% !important;
+  height: 500px !important;
+}
+
+
+
+// Components
+@import "./components/mainheader.scss";
+@import "./components/planetmodel.scss";
+@import "./components/particle.scss";
+@import "./components/counter.scss";
+
+
