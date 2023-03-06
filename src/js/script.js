@@ -126,14 +126,7 @@ document.addEventListener('scroll', function () {
 
 
 function countersAnim() {
-	let scrollTop = $(document).scrollTop();
-  let promo = $('.promo-advantages').scrollTop()
-  console.log(scrollTop)
-  console.log(promo)
-	$('.promo-advantage').not('.animated').each(function(key,item){
-		let elOffset = $(item).offset().top;
-    
-      
+	$('.promo-advantage').not('.animated').each(function(key,item){      
 			let counter = $(item).find('.animated-counter');
 			jQuery({ Counter: 0 }).animate({ Counter: counter.text() }, {
 				duration: 2000,
@@ -146,4 +139,28 @@ function countersAnim() {
 	})
 	
 }
+
+//* Initialize popup
+$(document).on("click", ".mfp-link", function () {
+  var a = $(this);
+  $.magnificPopup.open({
+    items: { src: a.attr("data-href") },
+    type: "ajax",
+    overflowY: "scroll",
+    removalDelay: 610,
+    mainClass: "my-mfp-zoom-in",
+    ajax: {
+      tError: "Error. Not valid url",
+    },
+    callbacks: {
+      open: function () {
+        setTimeout(function () {
+          $(".mfp-wrap, .mfp-bg").addClass("delay-back");
+          $(".mfp-popup").addClass("delay-back");
+        }, 700);
+      },
+    },
+  });
+  return false;
+});
 

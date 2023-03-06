@@ -74,4 +74,11 @@
             transition:  .3s border-color;
         }
     }
+    &-section-label {
+        text-transform: uppercase;
+        color: $blue;
+        font-size: rem(16);
+        // letter-spacing: 3px;
+        margin-bottom: 22px;
+    }
 }

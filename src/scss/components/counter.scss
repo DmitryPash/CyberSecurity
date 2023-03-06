@@ -1,13 +1,7 @@
 .promo-advantages {
+    margin-bottom: 120px;
     &-header {
-        &-label {
-            text-transform: uppercase;
-            color: $blue;
-            font-size: rem(20);
-            letter-spacing: 3px;
-            margin-bottom: 22px;
 
-        }
         &-title {
             color: #fff;
             font-size: rem(52);
@@ -22,11 +16,13 @@
 }
 
 .promo-advantage {
+    transform: translateY(150px);
     opacity: 0;
-    transition: 1s ease-in-out;
+    transition: 1.5s ease-in-out;
     text-align: center;
     &.animated {
         opacity: 1;
+        transform: translateY(0px);
     }
     &-digit {
         font-size: rem(42);

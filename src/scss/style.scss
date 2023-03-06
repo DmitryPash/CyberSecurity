@@ -9,6 +9,8 @@
 /* layout */
 @import "./layout/inc-header.scss";
 @import "./layout/inc-footer.scss";
+@import "./layout/popup.scss";
+
 
 /* pages */
 @import "index";
@@ -37,11 +39,10 @@ body {
   font-size: rem(16px);
   line-height: 1.42;
   color: #fff;
-  // background-color: $darkBlue;
+
   background: $darkBlue;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #24243e, #232047, $darkBlue);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #24243e, #232047, $darkBlue); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 #wrapper {
