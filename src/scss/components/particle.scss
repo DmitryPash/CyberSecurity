@@ -18,8 +18,10 @@
 .line-wrapper {
     position: absolute;
     right: 150px;
-    top: 0px;
+    top: -1%;
     opacity: 0.5;
+    transform: rotate(45deg);
+
 }
 .line {
     position: absolute;
@@ -33,7 +35,6 @@
         top: 0px;
         width: 800px;
         height: 1px;
-        transform: rotate(45deg);
     }
     &-2 {
         opacity: 1;
@@ -41,7 +42,6 @@
         top: 30px;
         width: 800px;
         height: 1px;
-        transform: rotate(45deg);
     }
     &-3 {
         opacity: 1;
@@ -49,6 +49,5 @@
         // right: 500px;
         width: 800px;
         height: 1px;
-        transform: rotate(45deg);
     }
 }

@@ -1,13 +1,11 @@
 const swiper = new Swiper('.innovation-slider', {
-    // Optional parameters
     direction: 'horizontal',
     loop: true,
     slidePerView: 1,
-    // If we need pagination
+
     pagination: {
       el: '.innovation-pagination',
       clickable: true,
-    //   type: 'progressbar'
     },
   
     

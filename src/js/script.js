@@ -45,6 +45,7 @@ function init() {
     house.scale.set(1,1,1)
     animate();
   });
+
 }
 
 function animate() {
@@ -71,7 +72,7 @@ if(ScrollTrigger.isTouch !== 1) {
   ScrollSmoother.create({
     wrapper: '.wrapper',
     content: '.content',
-    smooth: 1.5,
+    smooth: 1.2,
     effects: true,
   });
 
@@ -85,17 +86,40 @@ if(ScrollTrigger.isTouch !== 1) {
     }
   })
 
-  gsap.fromTo('.header',{borderBottom: 'none', background: 'transparent'},{
-    borderBottom: '1px solid #D88730',
-    background: 'linear-gradient(to right, #24243e, #232047, #1B2137)',
+
+  gsap.fromTo('.circle-item1_figure', { rotation:0 }, { 
+    rotation:-180,
     scrollTrigger: {
-      trigger: '.header',
-      start: '200',
-      end: '200',
+      trigger: '.innovation',
+      start: '-200',
+      end: '1000',
       scrub: true,
     }
   })
+  
+  gsap.fromTo('.case-botline-item', { right: '100%' }, { 
+    right: 0,
+    scrollTrigger: {
+      trigger: '.case',
+      start: 'top',
+      end: 'bottom',
+      scrub: true,
+    }
+  })
+ 
+  // gsap.fromTo('.header',{borderBottom: 'none', background: 'transparent'},{
+  //   borderBottom: '1px solid #D88730',
+  //   background: 'linear-gradient(to right, #24243e, #232047, #1B2137)',
+  //   scrollTrigger: {
+  //     trigger: '.header',
+  //     start: '200',
+  //     end: '200',
+  //     scrub: true,
+  //   }
+  // })
 
+} else {
+  $('.promo-advantage').addClass('animated')
 }
 
 
@@ -119,6 +143,7 @@ document.addEventListener('scroll', function () {
   if(messageText) {
     countersAnim()
   }
+
 }, {
   passive: true
 });
@@ -164,3 +189,52 @@ $(document).on("click", ".mfp-link", function () {
   return false;
 });
 
+
+//Btn footer up to top
+const btnUp = {
+  el: document.querySelector('.footer-backup'),
+  addEventListener() {
+    document.querySelector('.footer-backup').onclick = () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  }
+}
+
+btnUp.addEventListener();
+
+// Scroll to link
+function scrollToAnchor(aid){
+  var aTag = $("[name='"+ aid +"']");
+  $('html,body').animate({scrollTop: aTag.offset().top - 20},'slow');
+
+}
+
+$(".header-nav-link").click(function(elem) {
+  console.log(elem.target.dataset.name)
+  let aid = elem.target.dataset.name
+ scrollToAnchor(aid);
+});
+
+
+
+//website is under development
+(function () {
+  if (matchMedia) {
+    const screen = window.matchMedia("(max-width:1124px)");
+    screen.addListener(changes);
+    changes(screen);
+  }
+  function changes(screen) {
+    if (screen.matches) {
+    $('<div class="development"><span>Development work!</span><br><span>The site is currently under development</span></div>').appendTo('.wrapper');
+    $('body').css('overflow', 'hidden')
+    } else {
+      $('.development').remove();
+      $('body').css('overflow', 'auto')
+    }
+  }
+})();

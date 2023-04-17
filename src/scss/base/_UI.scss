@@ -3,6 +3,12 @@
         color: $orange;
         text-shadow: 5px -3px 1px #d8873029;
     }
+    &-block {
+        display: block;
+         @media(max-width:1024px) {
+                text-align: center;
+            }
+    }
     &-link {
         display: inline-block;
         position: relative;

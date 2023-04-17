@@ -1,6 +1,7 @@
 .mfp-popup {
-    background-color: #fff;
-    max-width: 880px;
+    position: relative;
+    // background-color: #fff;
+    max-width: min-content;
     margin: 0 auto;
     border-radius: 10px;
     padding: 30px;
@@ -45,7 +46,7 @@
 /*buttons*/
 #msform .action-button {
 	width: 100px;
-	background: #27AE60;
+	background: $orange;
 	font-weight: bold;
 	color: white;
 	border: 0 none;
@@ -57,7 +58,7 @@
   font-size: 14px;
 }
 #msform .action-button:hover, #msform .action-button:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+	box-shadow: 0 0 0 2px white, 0 0 0 3px $orange;
 }
 /*headings*/
 .fs-title {
@@ -118,7 +119,11 @@
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
-	background: #27AE60;
+	background: $orange;
 	color: white;
 }
 
+
+.mfp-close-btn-in .mfp-close {
+    color: $orange;
+}

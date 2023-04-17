@@ -21,6 +21,15 @@
     margin-bottom: 120px;
     display: flex;
     gap: 40px;
+     @media(max-width:1024px) {
+            gap: 0;
+            flex-direction: column;
+        }
+    &-slider {
+         @media(max-width:1024px) {
+                order: 2;
+            }
+    }
     &-nav_line {
         position: relative;
         top: -6px;
@@ -43,14 +52,27 @@
             // flex: 1 0 auto;
             flex: 0 0 30%;
             max-width: 30%;
+            &::-webkit-scrollbar { width: 0; }
+            -ms-overflow-style: none;
+            overflow: -moz-scrollbars-none; 
+             @media(max-width:1024px) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    order: 1;
+                    display: flex;
+                    height: min-content;
+                    overflow-x: scroll;
+                    gap: 20px;
+                }
     }
     &-nav_item {
         display: flex;
         align-items: center;
+        justify-content: end;
         gap: 25px;
         cursor: pointer;
         margin-bottom: 40px;
-    
+        min-width: 250px;
         &:hover {
             .innovation-nav_item-text {
                 color: $orange;

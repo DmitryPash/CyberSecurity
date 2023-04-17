@@ -9,7 +9,6 @@
 /* layout */
 @import "./layout/inc-header.scss";
 @import "./layout/inc-footer.scss";
-@import "./layout/popup.scss";
 
 
 /* pages */
@@ -54,14 +53,14 @@ body {
   overflow: hidden;
   min-height: 100%;
   min-width: 100%;
-  padding-top: 80px;
+  // padding-top: 80px;
 }
 
 #middle {
   flex: 1 0 auto;
   -webkit-box-flex: 1;
   padding-top: 100px;
-  height: 3000px;
+  // height: 100%;
 }
 
 #footer {
@@ -91,13 +90,34 @@ body::-webkit-scrollbar-thumb {
 .scene {
   max-width: 100%;
   max-height: 100%;
+  text-align: center;
 }
 .scene,
 canvas {
-  display: block;
+  display: inline-block;
   position: relative;
   width: 100% !important;
-  height: 500px !important;
+  height: 100%;
+  max-height: 500px !important;
+}
+
+
+section {
+  position: relative;
+}
+
+.development {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: $darkBlue;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #232047, $darkBlue);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #232047, $darkBlue); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+    position: absolute;
 }
 
 
@@ -108,6 +128,13 @@ canvas {
 @import "./components/particle.scss";
 @import "./components/counter.scss";
 @import "./components/innovation.scss";
+@import "./components/case.scss";
+@import "./components/news.scss";
+
+//popup
+@import "./popup/_form.scss";
+
+
 
 
 

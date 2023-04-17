@@ -11,6 +11,8 @@
     }
 }
 .rotation-item-line {
+    max-width: 500px;
+    max-height: 500px;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
@@ -36,6 +38,8 @@
     }
 }
 .rotation-item-lineB {
+    max-width: 500px;
+    max-height: 500px;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
@@ -50,6 +54,8 @@
 }
 
 .rotation-item-bcg {
+  max-height: 500px;
+  max-width: 500px;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;

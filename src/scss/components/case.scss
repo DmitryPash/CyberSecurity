@@ -1,0 +1,145 @@
+
+.case {
+ margin-bottom: 200px;
+
+ @media(max-width:556.99px) {
+    margin-bottom: 100px;
+ }
+
+    &-part {
+        text-transform: uppercase;
+        color: #4aa5f0;
+        font-size: 1rem;
+        margin-bottom: 22px;
+    }
+
+    &-title {
+        color: #fff;
+        font-size: 3.25rem;
+        margin-bottom: 80px;
+        max-width: 600px;
+        line-height: 110%;
+
+        @media(max-width:556.99px) {
+            font-size: 2.25rem;
+            margin-bottom: 50px;
+        }
+    }
+
+    &-topline {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 2px;
+        background-color: $orange;
+        margin-top: 40px;
+
+        &-item {
+            position: absolute;
+            z-index: 10;
+            left: 0;
+            top: 50%;
+            transform: translate(0%, -50%);
+            width: 15px;
+            height: 10px;
+            background-color: $orange;
+        }
+    }
+
+    &-block {
+        margin-bottom: 40px;
+
+        @media(max-width:1024.99px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &-subtitle {
+        color: #fff;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        
+        @media(max-width:556.99px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &-info {
+    margin-bottom: 30px;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+
+            @media(max-width:556.99px) {
+                align-items: baseline;
+            }
+
+            &-title {
+                text-transform: uppercase;
+                opacity: 0.5;
+                
+            }
+
+            &-text {
+                font-size: 1.125rem;
+                color: #afb6d2;
+            }
+
+        } 
+    }
+
+    &-about {
+        margin-bottom: 30px;
+    }
+
+
+    &-picture { 
+        display: inline-block; 
+        overflow: hidden; 
+        height: 100%;
+        border-radius: 15px;
+
+        @media(max-width:1024.99px) {
+            width: 100%;
+        }
+    }
+
+    &-picture img {
+        display: block; 
+        height: 100%;
+        object-fit: cover;
+
+        @media(max-width:1024.99px) {
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 15px;
+        }
+    }
+
+   
+    &-botline {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 2px;
+        background-color: $orange;
+        margin-bottom: 40px;
+
+        &-item {
+            position: absolute;
+            z-index: 10;
+            right: 0;
+            top: 50%;
+            transform: translate(0%, -50%);
+            width: 15px;
+            height: 10px;
+            background-color: $orange;
+        }
+    }
+    
+    
+
+}

@@ -1,5 +1,14 @@
 .promo-advantages {
     margin-bottom: 220px;
+     @media(max-width:1024px) {
+            .col-md-4 {
+                order: 2;
+            }
+            .col-md-8 {
+                order: 1;
+            }
+        }
+    
     &-header {
 
         &-title {
