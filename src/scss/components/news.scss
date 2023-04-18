@@ -34,20 +34,10 @@
             overflow: hidden;
             transition: 0.5s;
             margin-bottom: 66px;
+            background: $darkBlue;
             @media(max-width:556.99px) {
                margin-bottom: 30px;
             }
-
-            // &:hover &-picture{
-            //     transform: scale(1.1); 
-            // }
-
-            // &:hover &-title{
-            //     color: #4aa5f0;
-            //     padding-top: 10px;
-            //     transition: 0.5s;
-            // }
-            
 
             &-picture {
                 display: block;

@@ -1,6 +1,8 @@
 .promo-advantages {
     margin-bottom: 220px;
      @media(max-width:1024px) {
+        margin-bottom: 80px;
+
             .col-md-4 {
                 order: 2;
             }
@@ -10,11 +12,22 @@
         }
     
     &-header {
-
+         @media(max-width:1024px) {
+                margin-bottom: 40px;
+            }
         &-title {
             color: #fff;
             font-size: rem(52);
             margin-bottom: 20px;
+             @media(max-width:1024px) {
+                    font-size: rem(46);
+                }
+                 @media(max-width:576px) {
+                        font-size: rem(38);
+                    }
+                     @media(max-width:400px) {
+                            font-size: rem(30);
+                        }
         }
         &-text {
             color: $silver;

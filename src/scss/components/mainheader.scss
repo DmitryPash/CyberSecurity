@@ -8,6 +8,15 @@
             text-transform: uppercase;
             font-size: rem(54);
             margin-bottom: 30px;
+            @media(max-width:1024px) {
+                    font-size: rem(46);
+                }
+                 @media(max-width:576px) {
+                        font-size: rem(38);
+                    }
+                     @media(max-width:400px) {
+                            font-size: rem(30);
+                        }
         }
         &-subtitle {
             color: #fff;
@@ -16,8 +25,9 @@
         }
         &-btns  {
             display: flex;
+            flex-wrap: wrap;
             gap: 20px;
-            
+             
         }
     }
 }

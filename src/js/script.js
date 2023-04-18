@@ -222,19 +222,38 @@ $(".header-nav-link").click(function(elem) {
 
 
 //website is under development
-(function () {
-  if (matchMedia) {
-    const screen = window.matchMedia("(max-width:1124px)");
-    screen.addListener(changes);
-    changes(screen);
+// (function () {
+//   if (matchMedia) {
+//     const screen = window.matchMedia("(max-width:1124px)");
+//     screen.addListener(changes);
+//     changes(screen);
+//   }
+//   function changes(screen) {
+//     if (screen.matches) {
+//     $('<div class="development"><span>Development work!</span><br><span>The site is currently under development</span></div>').appendTo('.wrapper');
+//     $('body').css('overflow', 'hidden')
+//     } else {
+//       $('.development').remove();
+//       $('body').css('overflow', 'auto')
+//     }
+//   }
+// })();
+
+
+function findLatter(string, latter, numberOfLatter) {
+  let infinityString = '';
+  let findLatter = [];
+  let latterArray;
+  for(let i = 0; i < numberOfLatter; i++) {
+    infinityString = infinityString + string
   }
-  function changes(screen) {
-    if (screen.matches) {
-    $('<div class="development"><span>Development work!</span><br><span>The site is currently under development</span></div>').appendTo('.wrapper');
-    $('body').css('overflow', 'hidden')
-    } else {
-      $('.development').remove();
-      $('body').css('overflow', 'auto')
+  latterArray = infinityString.split('');
+  for(let y = 0; y < latterArray.length; y++) {
+    if(latterArray[y] == latter) {
+      findLatter.push(latterArray[y])
     }
   }
-})();
+  console.log("Букв " + latter + " = " + findLatter.length)
+}
+
+findLatter('ivan eto vangog','v',20);

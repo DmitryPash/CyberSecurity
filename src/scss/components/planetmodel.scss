@@ -2,6 +2,9 @@
     position: relative;
     width: 100%;
     height: 100%;
+     @media(max-width:1170px) {
+            display: none;
+        }
     &-shield {
         position: absolute;
         transform: translate(-50%,-50%);
